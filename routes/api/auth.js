@@ -8,7 +8,7 @@ const {check, validationResult} = require('express-validator/check');
 const bcrypt = require('bcryptjs'); 
 
 //@route  GET api/auth
-//@desc   Test route
+//@desc   Get a user's token (for frontend)
 //@access Public
 router.get('/', auth, async (req, res) => {
     try{
@@ -21,7 +21,7 @@ router.get('/', auth, async (req, res) => {
 });
 
 //@route POST api/users
-//@desc Register user
+//@desc Login a user
 //@access Public
 router.post('/', [
     check('email', 'Please include a valid email address').isEmail(),
