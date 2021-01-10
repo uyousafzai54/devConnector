@@ -51,7 +51,7 @@ async (req, res) => {
 
         //Return JWT
         const payload = {
-            user: {
+            user: { //req.user.id
                 id: user.id
             }
         }
